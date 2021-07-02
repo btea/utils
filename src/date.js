@@ -46,14 +46,14 @@ export function getMonthTotal(year, month) {
 /**
  * @desc 格式化时间
  * @params {date} date 需要格式化的时间
- * @params {string} format 需要转换的格式 
+ * @params {string} format 需要转换的格式
  * @return {string} 转化后的字符串,失败则返回空字符串''
-*/
+ */
 export function formatDate(date, format) {
-    date = new Date(date)
+    date = new Date(date);
     if (date.toString() === 'Invalid Date') {
         console.log('请输入有效的时间');
-        return ''
+        return '';
     }
     const y = date.getFullYear();
     const M = date.getMonth() + 1;
@@ -67,5 +67,5 @@ export function formatDate(date, format) {
     format = format.replace(/h+/, ('0' + M).slice(-2));
     format = format.replace(/m+/, ('0' + M).slice(-2));
     format = format.replace(/s+/, ('0' + M).slice(-2));
-    format.replace('yyyy', date.getFullYear()).replace('MM', date.)
+    return format;
 }
