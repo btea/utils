@@ -14,7 +14,7 @@ export function isLeapyear(year) {
         console.log('参数' + year + '并不是一个有效的年份');
         return;
     }
-    return (yr % 4 === 0 && yr % 100 !== 0) || yr % 400 === 0;
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
 /**
@@ -63,9 +63,9 @@ export function formatDate(date, format) {
     const s = date.getSeconds();
     format = format.replace(/y+/, y);
     format = format.replace(/M+/, ('0' + M).slice(-2));
-    format = format.replace(/d+/, ('0' + M).slice(-2));
-    format = format.replace(/h+/, ('0' + M).slice(-2));
-    format = format.replace(/m+/, ('0' + M).slice(-2));
-    format = format.replace(/s+/, ('0' + M).slice(-2));
+    format = format.replace(/d+/, ('0' + d).slice(-2));
+    format = format.replace(/h+/, ('0' + h).slice(-2));
+    format = format.replace(/m+/, ('0' + m).slice(-2));
+    format = format.replace(/s+/, ('0' + s).slice(-2));
     return format;
 }

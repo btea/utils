@@ -1,6 +1,6 @@
 {
     "name": "@btea/utils",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "common tool functions",
     "main": "index.js",
     "scripts": {
