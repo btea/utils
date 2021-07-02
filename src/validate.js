@@ -1,6 +1,6 @@
 /**
  * @desc 判断输入的年份是否为一个有效值
- * @params v {string| number} 需要判断的年份
+ * @param {string| number} v 需要判断的年份
  * @return {boolean} true/false
  */
 export function isValidYear(v) {
@@ -10,7 +10,7 @@ export function isValidYear(v) {
 
 /**
  * @desc 判断输入的月份是否为一个有效值
- * @params v {string| number} 需要判断的年份
+ * @param {string| number} v 需要判断的年份
  * @return {boolean} true/false
  * @desc 补充：默认年份从1开始
  */

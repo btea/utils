@@ -1,7 +1,7 @@
 import { isValidYear, isValidMonth } from './validate';
 /**
  * @desc 判断一个年份是否是闰年
- * @params year {string| number} 需要判断的年份
+ * @param {string| number} year 需要判断的年份
  * @return {Boolean} true/false
  */
 export function isLeapyear(year) {
@@ -19,8 +19,8 @@ export function isLeapyear(year) {
 
 /**
  * @desc 通过年月获取指定的月份的总天数
- * @params {string|number} year 指定的年份
- * @params {string|number} month 指定的月份
+ * @param {string|number} year 指定的年份
+ * @param {string|number} month 指定的月份
  * @return {number} 返回的天数,参数无效返回-1
  */
 export function getMonthTotal(year, month) {
@@ -45,9 +45,9 @@ export function getMonthTotal(year, month) {
 
 /**
  * @desc 格式化时间
- * @params {date} date 需要格式化的时间
- * @params {string} format 需要转换的格式
- * @return {string} 转化后的字符串,失败则返回空字符串''
+ * @param {Date} date 需要格式化的时间
+ * @param {String} format 需要转换的格式
+ * @return {String} 转化后的字符串,失败则返回空字符串''
  */
 export function formatDate(date, format) {
     date = new Date(date);
