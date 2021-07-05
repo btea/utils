@@ -1,4 +1,5 @@
 import { isOdd } from './isOdd';
+import { isNumber } from './type';
 /**
  * @desc 判断一个数是否为偶数
  * @param {number|...} val 传入的参数
