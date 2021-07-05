@@ -32,4 +32,7 @@ describe('判断月份是否有效', function () {
     it('81不是一个有效的年份', function () {
         equal(isValidMonth('81'), false);
     });
+    it('undefined不是一个有效的月份', function () {
+        equal(isValidMonth(undefined), false);
+    });
 });

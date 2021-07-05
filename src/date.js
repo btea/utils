@@ -7,12 +7,12 @@ import { isValidYear, isValidMonth } from './validate';
 export function isLeapyear(year) {
     if (!year) {
         console.log('请输入年份');
-        return;
+        return false;
     }
     year = String(year).trim();
     if (!isValidYear(year)) {
         console.log('参数' + year + '并不是一个有效的年份');
-        return;
+        return false;
     }
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
