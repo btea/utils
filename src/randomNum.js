@@ -9,14 +9,15 @@ import { isNumber } from './type';
 export function randomNum(max, min, isInteger) {
     if (isNumber(max)) {
         console.log(`输入的参数 ${max} 不是一个数字`);
-        return;
+        return NaN;
     }
     if (isNumber(min)) {
         console.log(`输入的参数 ${min} 不是一个数字`);
-        return;
+        return NaN;
     }
     if (max <= min) {
         console.log(`输入的区间范围 max: ${max} 应该大于 min: ${min}`);
+        return NaN;
     }
     const v = Math.random() * (max - min) + min;
     if (isInteger) {
