@@ -10,10 +10,41 @@ export function isString(val) {
 /**
  * @desc 判断一个参数是否为数字
  * @param {string|number...} val 传入的参数
+ * @return {boolean}
  */
 export function isNumber(val) {
     const type = getType(val);
     return type === 'number' || type === 'bigint';
+}
+
+/**
+ * @desc 判断一个参数是否为数组
+ * @param {any} val 传入的参数
+ * @return {boolean}
+ */
+export function isArray(val) {
+    if (Array.isArray) {
+        return Array.isArray(val);
+    }
+    return getType(val) === 'array';
+}
+
+/**
+ * @desc 判断一个参数是否为对象
+ * @param {any} val 传入的参数
+ * @return {boolean}
+ */
+export function isObject(val) {
+    return getType(val) === 'object';
+}
+
+/**
+ * @desc 判断一个参数是否为真值
+ * @param {any} val 传入的参数
+ * @return {boolean}
+ */
+export function isTruly(val) {
+    return !!val;
 }
 
 /**
