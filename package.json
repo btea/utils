@@ -1,6 +1,6 @@
 {
     "name": "@btea/utils",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "common tool functions",
     "main": "index.js",
     "scripts": {
@@ -11,7 +11,13 @@
         "type": "git",
         "url": "git+https://github.com/btea/utils.git"
     },
-    "keywords": [],
+    "keywords": [
+        "date",
+        "format",
+        "random number",
+        "month days",
+        "color"
+    ],
     "author": "",
     "license": "ISC",
     "bugs": {
