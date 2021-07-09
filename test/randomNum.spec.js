@@ -4,19 +4,19 @@ import { randomNum } from '../src/randomNum';
 describe('生成一个区间范围内的随机数randomNum', () => {
     it('a不是一个数字', done => {
         var v = randomNum('a');
-        if (v !== NaN) {
+        if (v !== v) {
             done();
         }
     });
     it('b不是一个数字', done => {
         var v = randomNum(10, 'b');
-        if (v !== NaN) {
+        if (v !== v) {
             done();
         }
     });
     it('10 20不是一个有效的区间', done => {
         var v = randomNum(10, 20);
-        if (v !== NaN) {
+        if (v !== v) {
             done();
         }
     });
