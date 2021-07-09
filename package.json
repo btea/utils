@@ -1,6 +1,6 @@
 {
     "name": "@btea/utils",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "common tool functions",
     "main": "out.cjs.js",
     "scripts": {

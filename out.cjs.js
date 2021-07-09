@@ -294,11 +294,11 @@
       });
       var import_type = __toModule(require_type());
       function randomNum(max, min, isInteger) {
-        if ((0, import_type.isNumber)(max)) {
+        if (!(0, import_type.isNumber)(max)) {
           console.log(`\u8F93\u5165\u7684\u53C2\u6570 ${max} \u4E0D\u662F\u4E00\u4E2A\u6570\u5B57`);
           return NaN;
         }
-        if ((0, import_type.isNumber)(min)) {
+        if (!(0, import_type.isNumber)(min)) {
           console.log(`\u8F93\u5165\u7684\u53C2\u6570 ${min} \u4E0D\u662F\u4E00\u4E2A\u6570\u5B57`);
           return NaN;
         }
