@@ -7,11 +7,11 @@ import { isNumber } from './type';
  * @return {number} 生成的随机数
  */
 export function randomNum(max, min, isInteger) {
-    if (isNumber(max)) {
+    if (!isNumber(max)) {
         console.log(`输入的参数 ${max} 不是一个数字`);
         return NaN;
     }
-    if (isNumber(min)) {
+    if (!isNumber(min)) {
         console.log(`输入的参数 ${min} 不是一个数字`);
         return NaN;
     }
