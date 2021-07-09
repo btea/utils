@@ -37,7 +37,7 @@ export function getMonthTotal(year, month) {
         return -1;
     }
     if (!isValidMonth(month)) {
-        console.log('参数' + month + '并不是一个有的月份');
+        console.log('参数' + month + '并不是一个有效的月份');
         return -1;
     }
     return new Date(year, month, 0).getDate();
