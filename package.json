@@ -2,11 +2,13 @@
     "name": "@btea/utils",
     "version": "0.0.6",
     "description": "common tool functions",
-    "main": "out.js",
+    "main": "out.cjs.js",
     "scripts": {
         "test": "mocha",
         "coverage": "nyc npm run test",
-        "build": "node build.js"
+        "build": "node build.js",
+        "build-cjs": "node build.js cjs",
+        "build-esm": "node build.js esm"
     },
     "repository": {
         "type": "git",
