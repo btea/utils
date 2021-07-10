@@ -92,7 +92,7 @@
           return -1;
         }
         if (!(0, import_validate.isValidMonth)(month)) {
-          console.log("\u53C2\u6570" + month + "\u5E76\u4E0D\u662F\u4E00\u4E2A\u6709\u7684\u6708\u4EFD");
+          console.log("\u53C2\u6570" + month + "\u5E76\u4E0D\u662F\u4E00\u4E2A\u6709\u6548\u7684\u6708\u4EFD");
           return -1;
         }
         return new Date(year, month, 0).getDate();

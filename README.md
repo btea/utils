@@ -13,7 +13,7 @@ npm i @btea/utils
 ### cdn：
 
 ```js
-<script src="https://cdn.jsdelivr.net/npm/@btea/utils@0.0.10/out.cjs.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@btea/utils/out.cjs.js"></script>
 <script type="text/javascript">
     const formatDate = zys.formatDate;
 </script>
