@@ -1,8 +1,8 @@
 {
     "name": "@btea/utils",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "common tool functions",
-    "main": "out.cjs.js",
+    "main": "index.js",
     "scripts": {
         "test": "mocha",
         "coverage": "nyc npm run test",
