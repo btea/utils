@@ -14,6 +14,7 @@ npm i @btea/utils
 
 ```js
 <script src="https://cdn.jsdelivr.net/npm/@btea/utils/out.cjs.js"></script>
+<script src="https://www.unpkg.com/@btea/utils/out.cjs.js"></script>
 <script type="text/javascript">
     const formatDate = zys.formatDate;
 </script>
