@@ -10,10 +10,17 @@ common tool functions
 npm i @btea/utils
 ```
 
-### cdn：
+### 使用 jsDelivr CDN:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@btea/utils/out.cjs.js"></script>
+<script type="text/javascript">
+    const formatDate = zys.formatDate;
+</script>
+```
+
+### 使用 unpkg CDN:  
+```html
 <script src="https://www.unpkg.com/@btea/utils/out.cjs.js"></script>
 <script type="text/javascript">
     const formatDate = zys.formatDate;
