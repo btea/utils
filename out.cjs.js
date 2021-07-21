@@ -315,6 +315,41 @@
     }
   });
 
+  // src/clone.js
+  var require_clone = __commonJS({
+    "src/clone.js"(exports) {
+      var __defProp = Object.defineProperty;
+      var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
+      var __export = (target, all) => {
+        __markAsModule(target);
+        for (var name in all)
+          __defProp(target, name, { get: all[name], enumerable: true });
+      };
+      __export(exports, {
+        deepClone: () => deepClone
+      });
+      function deepClone(obj, map = new WeakMap()) {
+        if (obj instanceof RegExp)
+          return new RegExp(obj);
+        if (obj instanceof Date)
+          return new Date(obj);
+        if (obj == null || typeof obj != "object")
+          return obj;
+        if (map.has(obj)) {
+          return map.get(obj);
+        }
+        const target = new obj.constructor();
+        map.set(obj, target);
+        for (let key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            target[key] = deepClone(obj[key], map);
+          }
+        }
+        return target;
+      }
+    }
+  });
+
   // index.js
   var require_utils = __commonJS({
     "index.js"(exports) {
@@ -342,6 +377,7 @@
         return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
       };
       __export(exports, {
+        deepClone: () => import_clone.deepClone,
         formatDate: () => import_date.formatDate,
         getMonthTotal: () => import_date.getMonthTotal,
         getType: () => import_type.getType,
@@ -362,6 +398,7 @@
       var import_isOdd = __toModule(require_isOdd());
       var import_randomNum = __toModule(require_randomNum());
       var import_type = __toModule(require_type());
+      var import_clone = __toModule(require_clone());
     }
   });
   window.zys = require_utils();
