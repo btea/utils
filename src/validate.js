@@ -24,3 +24,15 @@ export function isValidMonth(v) {
     }
     return /^\d{1,2}$/.test(v);
 }
+
+/**
+ * @desc 判断输入的日期是否为一个有效值
+ * @param {unknown} val 需要判断的输入值
+ * @return {boolean} true/false 输入的时间是否是一个有效时间
+ */
+export function isValidTime(val) {
+    if (!val) {
+        return false;
+    }
+    return 'Invalid Date' !== new Date(val).toString();
+}
