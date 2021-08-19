@@ -15,6 +15,7 @@ export function pastTimeDesc(time) {
     if (isYesterday(time)) {
         return '昨天';
     }
+    return formatDate(time, 'yyyy/MM/dd');
     // TODO 更多情况判断
 }
 
