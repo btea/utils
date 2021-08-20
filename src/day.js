@@ -11,7 +11,7 @@ export function getTimeNum(time, type) {
         return -1;
     }
     time = new Date(time);
-    const one_day = 24 * 3600 * 1000;
+    const one_day = 864e5;
     const year = time.getFullYear();
     const start = new Date(year, 0);
     if (type === 'day') {
@@ -23,17 +23,13 @@ export function getTimeNum(time, type) {
     }
     if (type === 'week') {
         const day = start.getDay();
-        const offset_day = day === 0 ? 1 : 7 - day + 1;
-        time = new Date(time.getTime() - offset_day * one_day);
-        // console.log(start, time);
-        // if (time.getTime() <= start.getTime()) {
-        //     return 1;
-        // }
-        const num = (time.getTime() - start.getTime()) / (one_day * 7);
-        if (/\./.test(num)) {
-            return Math.ceil(num) + 1;
+        const offset = day === 0 ? 1 : 7 - day + 1;
+        let num = (time.getTime() - start.getTime() + 1) / one_day;
+        if (num <= offset) {
+            return 1;
         }
-        return num + 1 + 1;
+        num -= offset;
+        return Math.ceil(num / 7) + 1;
     }
     return -1;
 }

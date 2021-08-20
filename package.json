@@ -6,6 +6,7 @@
     "jsdelivr": "out.cjs.js",
     "scripts": {
         "test": "mocha",
+        "day": "mocha ./test/day.spec.js",
         "coverage": "nyc npm run test",
         "build": "node build.js",
         "build-cjs": "node build.js cjs",
