@@ -3,7 +3,7 @@ import { isValidTime } from './validate';
  * @desc 获取指定日期是当年的第几天，第几周
  * @param {unknown} time 需要取值的时间
  * @param {string} type 指定需返回数值代表的意义
- * @return {number} 返回指定事件的天数或者周数，若未无效时间则返回 -1
+ * @return {number} 返回指定事件的天数或者周数，若为无效时间则返回 -1
  */
 
 export function getTimeNum(time, type) {
