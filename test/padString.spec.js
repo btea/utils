@@ -1,5 +1,7 @@
 import { padString } from '../src/padString';
-import { equal } from 'assert';
+import { describe, it, assert } from 'vitest';
+
+const { equal } = assert;
 
 describe('对字符串进行指定长度的填充', () => {
     it('"1"字符串用"*"填充到6个字符串', () => {

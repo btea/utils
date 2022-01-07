@@ -1,6 +1,7 @@
 import { getTimeNum } from '../src/day';
-import { equal } from 'assert';
+import { describe, it, assert } from 'vitest';
 
+const { equal } = assert;
 describe('获取指定时间为当年的第几天或者第几周', () => {
     it('""空字符串是一个无效值', () => {
         equal(getTimeNum(''), -1);

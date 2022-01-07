@@ -1,5 +1,7 @@
 import { isValidYear, isValidMonth } from '../src/validate';
-import { equal } from 'assert';
+import { describe, it, assert } from 'vitest';
+
+const { equal } = assert;
 
 describe('判断年份是否有效', function () {
     it('20211不是一个有效的年份', function () {

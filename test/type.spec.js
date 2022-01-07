@@ -1,5 +1,7 @@
 import { isString, isNumber, isArray, isObject, isTruly, getType } from '../src/type';
-import { equal } from 'assert';
+import { describe, it, assert } from 'vitest';
+
+const { equal } = assert;
 
 describe('判断是否为字符串isString', function () {
     it('"a"是一个字符串', function () {

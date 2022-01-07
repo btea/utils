@@ -1,5 +1,7 @@
-import { equal } from 'assert';
 import { randomNum } from '../src/randomNum';
+import { describe, it, assert } from 'vitest';
+
+const { equal } = assert;
 
 describe('生成一个区间范围内的随机数randomNum', () => {
     it('a不是一个数字', done => {
@@ -21,7 +23,6 @@ describe('生成一个区间范围内的随机数randomNum', () => {
         }
     });
     it('20 10生成一个大于等于10，小于20的随机数，包含整数和小数', function (done) {
-        this.timeout(500);
         var v = randomNum(20, 10);
         if (v >= 10 && v < 20) {
             var reg = /1[0-9](\.\d+)*/;

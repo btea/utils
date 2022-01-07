@@ -1,5 +1,8 @@
-import { equal } from 'assert';
 import { getMonthTotal, isLeapyear, formatDate } from '../src/date';
+import { describe, it, assert } from 'vitest';
+
+const { equal } = assert;
+
 describe('获取指定月份天数getMonthTotal', () => {
     it('2020年2月天数29', () => {
         equal(getMonthTotal(2020, 2), 29);
