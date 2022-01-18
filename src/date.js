@@ -1,4 +1,5 @@
 import { isValidYear, isValidMonth } from './validate';
+import { padString } from './padString';
 /**
  * @desc 判断一个年份是否是闰年
  * @param {string| number} year 需要判断的年份
@@ -62,10 +63,16 @@ export function formatDate(date, format) {
     const m = date.getMinutes();
     const s = date.getSeconds();
     format = format.replace(/y+/, y);
-    format = format.replace(/M+/, ('0' + M).slice(-2));
-    format = format.replace(/d+/, ('0' + d).slice(-2));
-    format = format.replace(/h+/, ('0' + h).slice(-2));
-    format = format.replace(/m+/, ('0' + m).slice(-2));
-    format = format.replace(/s+/, ('0' + s).slice(-2));
+    const list = {
+        'M+': M,
+        'd+': d,
+        'h+': h,
+        'm+': m,
+        's+': s
+    };
+    Object.keys(list).forEach(k => {
+        const reg = new RegExp(k);
+        format = format.replace(reg, padString(list[k], 2, '0'));
+    });
     return format;
 }
