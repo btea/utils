@@ -90,15 +90,15 @@ _判断是否为数字_
 
 #### isArray(v: unknown)
 
-_判读是否为数组_
+_判断是否为数组_
 
 #### isObject(v: unknown)
 
-_判读是否为对象_
+_判断是否为对象_
 
 #### isTruly(v: unknown)
 
-_判读是否为真值_
+_判断是否为真值_
 
 #### getType(v: unknown)
 
