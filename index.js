@@ -1,4 +1,5 @@
 export { isLeapyear, getMonthTotal, formatDate } from './src/date';
+export { getTimeNum } from './src/day';
 export { randomColor } from './src/color';
 export { isEven } from './src/isEven';
 export { isOdd } from './src/isOdd';
