@@ -3,7 +3,6 @@ import { deepClone } from '../src/clone';
 import { describe, it, assert } from 'vitest';
 
 const { equal } = assert;
-const a = 10;
 
 describe('深度克隆一个对象或者数组', () => {
     let obj = {
