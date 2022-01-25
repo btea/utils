@@ -8,7 +8,7 @@ specifiers:
   esbuild: ^0.12.15
   lodash: ^4.17.21
   vite: ^2.7.10
-  vitest: ^0.0.136
+  vitest: ^0.2.1
 
 dependencies:
   lodash: 4.17.21
@@ -20,7 +20,7 @@ devDependencies:
   c8: 7.11.0
   esbuild: 0.12.29
   vite: 2.7.10
-  vitest: 0.0.136_c8@7.11.0
+  vitest: 0.2.1_c8@7.11.0
 
 packages:
 
@@ -2186,8 +2186,8 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: true
 
-  /tinyspy/0.2.7:
-    resolution: {integrity: sha512-AaNITSED8/2j2/nSgPeQZW2nNhdTxNJ7XwcdBezI7MtPS2C+pJ1HjcHc/qfDhohUhQvODITdxzWH9u+Qs+7yFQ==}
+  /tinyspy/0.2.8:
+    resolution: {integrity: sha512-4VXqQzzh9gC5uOLk77cLr9R3wqJq07xJlgM9IUdCNJCet139r+046ETKbU1x7mGs7B0k7eopyH5U6yflbBXNyA==}
     engines: {node: '>=14.0.0'}
     dev: true
 
@@ -2257,8 +2257,32 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.0.136_c8@7.11.0:
-    resolution: {integrity: sha512-l/FByRw+GNIckkAKMUib8HF5K+U3vmlrBOIl2ugt2FtMPvxSCKmRrbZWPmo3bbMzK1dekqSLILFp0v8WjNS5Lg==}
+  /vite/2.7.13:
+    resolution: {integrity: sha512-Mq8et7f3aK0SgSxjDNfOAimZGW9XryfHRa/uV0jseQSilg+KhYDSoNb9h1rknOy6SuMkvNDLKCYAYYUMCE+IgQ==}
+    engines: {node: '>=12.2.0'}
+    hasBin: true
+    peerDependencies:
+      less: '*'
+      sass: '*'
+      stylus: '*'
+    peerDependenciesMeta:
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+    dependencies:
+      esbuild: 0.13.15
+      postcss: 8.4.5
+      resolve: 1.21.0
+      rollup: 2.63.0
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /vitest/0.2.1_c8@7.11.0:
+    resolution: {integrity: sha512-9tk436ZwXXykce3XagiBc97DaSWghoJqlnbWDm2Q52JFPVmD9iaBuvbWgVhLElREHinzPPtI/RhcCrHV3/0olg==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:
@@ -2282,8 +2306,8 @@ packages:
       chai: 4.3.4
       local-pkg: 0.4.1
       tinypool: 0.1.1
-      tinyspy: 0.2.7
-      vite: 2.7.10
+      tinyspy: 0.2.8
+      vite: 2.7.13
     transitivePeerDependencies:
       - less
       - sass
