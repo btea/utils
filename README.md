@@ -117,3 +117,6 @@ _克隆_
 #### padString(s: number | string, len: number, char: string, pos: 'start' | 'end')
 
 _将目标数字或字符串用特定字符填充到指定的长度_
+
+
+> [browser vs module vs main](https://www.cnblogs.com/qianxiaox/p/14041717.html)  

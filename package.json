@@ -2,13 +2,19 @@
     "name": "@btea/utils",
     "version": "0.0.13",
     "description": "common tool functions",
-    "main": "index.js",
-    "jsdelivr": "out.cjs.js",
+    "main": "out.cjs.js",
+    "module": "out.esm.js",
+    "browsers": "out.js",
     "scripts": {
         "test": "vitest",
         "day": "vitest /test/day.test.js",
         "coverage": "vitest --coverage",
-        "build": "node build.js",
+        "r-build": "pnpm r-build-iife && pnpm r-build-cjs && pnpm r-build-esm",
+        "r-build-iife": "node rollup.build.js iife",
+        "r-build-cjs": "node rollup.build.js cjs",
+        "r-build-esm": "node rollup.build.js esm",
+        "build": "pnpm build-iife && pnpm build-cjs && pnpm build-esm",
+        "build-iife": "node build.js iife",
         "build-cjs": "node build.js cjs",
         "build-esm": "node build.js esm"
     },
@@ -34,6 +40,7 @@
         "esbuild": "^0.12.15",
         "lodash": "^4.17.21",
         "picocolors": "^1.0.0",
+        "rollup": "^2.66.1",
         "vite": "^2.7.10",
         "vitest": "^0.2.3"
     }

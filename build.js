@@ -8,7 +8,8 @@ require('esbuild').build({
     entryPoints: ['index.js'],
     bundle: true,
     loader: { '.js': 'jsx' },
-    define: { require_utils: 'zys_utils' },
     plugins: [bindEnv],
-    outfile
+    outfile,
+    platform: 'neutral',
+    format: format || 'iife'
 });

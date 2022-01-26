@@ -15,11 +15,13 @@ module.exports = {
             };
         });
         build.onEnd(result => {
-            const name = format === 'iife' ? 'out.js' : `out.${format}.js`;
-            const p = path.join(__dirname, name);
-            const val = fs.readFileSync(p, 'utf-8');
-            const res = val.replace('require_utils();', 'window.zys = require_utils();');
-            fs.writeFileSync(p, res, 'utf-8');
+            if (format === 'iife') {
+                const name = format === 'iife' ? 'out.js' : `out.${format}.js`;
+                const p = path.join(__dirname, name);
+                const val = fs.readFileSync(p, 'utf-8');
+                const res = val.replace('require_utils();', 'window.zys = require_utils();');
+                fs.writeFileSync(p, res, 'utf-8');
+            }
         });
     }
 };

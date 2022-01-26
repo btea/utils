@@ -5,6 +5,7 @@ specifiers:
   esbuild: ^0.12.15
   lodash: ^4.17.21
   picocolors: ^1.0.0
+  rollup: ^2.66.1
   vite: ^2.7.10
   vitest: ^0.2.3
 
@@ -13,6 +14,7 @@ devDependencies:
   esbuild: 0.12.29
   lodash: 4.17.21
   picocolors: 1.0.0
+  rollup: 2.66.1
   vite: 2.7.10
   vitest: 0.2.3_c8@7.11.0
 
@@ -551,8 +553,8 @@ packages:
       glob: 7.2.0
     dev: true
 
-  /rollup/2.63.0:
-    resolution: {integrity: sha512-nps0idjmD+NXl6OREfyYXMn/dar3WGcyKn+KBzPdaLecub3x/LrId0wUcthcr8oZUAcZAR8NKcfGGFlNgGL1kQ==}
+  /rollup/2.66.1:
+    resolution: {integrity: sha512-crSgLhSkLMnKr4s9iZ/1qJCplgAgrRY+igWv8KhG/AjKOJ0YX/WpmANyn8oxrw+zenF3BXWDLa7Xl/QZISH+7w==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -674,7 +676,7 @@ packages:
       esbuild: 0.13.15
       postcss: 8.4.5
       resolve: 1.21.0
-      rollup: 2.63.0
+      rollup: 2.66.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -698,7 +700,7 @@ packages:
       esbuild: 0.13.15
       postcss: 8.4.5
       resolve: 1.21.0
-      rollup: 2.63.0
+      rollup: 2.66.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
