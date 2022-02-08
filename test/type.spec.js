@@ -35,6 +35,9 @@ describe('判断是否为数组isArray', function () {
     it('[]是一个数组', function () {
         equal(isArray([]), true);
     });
+    it('[]是一个数组', function () {
+        equal(isArray([]), true);
+    });
 });
 describe('判断是否为对象isObject', function () {
     it('null不是一个对象', function () {
