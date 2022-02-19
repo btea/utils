@@ -22,8 +22,8 @@ export function padString(str, len, char = ' ', pos = 'start') {
     }
     if (pos === 'start') {
         str = char.repeat(len) + str;
-    } else {
-        str += char.repeat(len);
+        return str.slice(-len)
     }
+    str += char.repeat(len);
     return str.slice(0, len);
 }

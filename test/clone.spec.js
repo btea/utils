@@ -8,7 +8,9 @@ describe('深度克隆一个对象或者数组', () => {
     let obj = {
         name: 'z',
         age: 18,
-        skill: ['speak', 'song']
+        skill: ['speak', 'song'],
+        date: new Date(),
+        rgp: new RegExp()
     };
     let arr = ['one', 'two', { name: 'three' }];
     it('克隆对象obj', () => {
@@ -25,4 +27,10 @@ describe('深度克隆一个对象或者数组', () => {
         equal(isEqual, true);
         equal(notEqual, true);
     });
+    it('循环对象', () => {
+        const o = {cir: obj}
+        obj.newKey = o
+        const _o = deepClone(o)
+        equal(_.isEqual(_o, o), true)
+    })
 });
