@@ -36,12 +36,13 @@
     },
     "homepage": "https://github.com/btea/utils#readme",
     "devDependencies": {
-        "c8": "^7.12.0",
-        "esbuild": "^0.16.16",
+        "@vitest/coverage-c8": "^0.28.5",
+        "c8": "^7.13.0",
+        "esbuild": "^0.17.10",
         "lodash": "^4.17.21",
         "picocolors": "^1.0.0",
-        "rollup": "^3.9.1",
-        "vite": "^4.0.4",
-        "vitest": "0.27.0"
+        "rollup": "^3.17.2",
+        "vite": "^4.1.4",
+        "vitest": "0.28.5"
     }
 }
