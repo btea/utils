@@ -22,7 +22,7 @@ jobs:
       - name: Gen npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM }}" >> ./.npmrc
 
-      - run: npm publish --provenance --access public
+      - run: npm publish --access public --provenance
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM }}
