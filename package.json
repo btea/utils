@@ -1,6 +1,6 @@
 {
     "name": "@btea/utils",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "description": "common tool functions",
     "main": "out.cjs.js",
     "module": "out.esm.js",
