@@ -17,11 +17,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 16.x
           registry-url: https://registry.npmjs.org/
       - name: Gen npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM }}" >> ./.npmrc
-
+      - name: update npm
+        run: npm install npm@latest -g 
       - run: npm publish --access public --provenance
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
