@@ -2,6 +2,6 @@
 
 set -e
 
-npm publish --access public --provenance
+npm publish --provenance
 
 echo "✅ Publish completed"
