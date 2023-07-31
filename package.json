@@ -1,6 +1,6 @@
 {
     "name": "@btea/utils",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "description": "common tool functions",
     "main": "out.cjs.js",
     "module": "out.esm.js",
@@ -43,6 +43,6 @@
         "picocolors": "^1.0.0",
         "rollup": "^3.20.2",
         "vite": "^4.2.1",
-        "vitest": "0.29.8"
+        "vitest": "0.31.1"
     }
 }
