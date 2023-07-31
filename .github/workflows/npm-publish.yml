@@ -23,7 +23,9 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM }}" >> ./.npmrc
       - name: update npm
         run: npm install npm@latest -g 
-      - run: npm publish --access public --provenance
+      - name: publish
+        # run: npm publish --access public --provenance
+        run: sh ./scripts/publish.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM }}
