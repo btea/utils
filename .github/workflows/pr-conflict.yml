@@ -1,46 +1,64 @@
-name: Comment on PR with conflict Label
+name: PR Conflict and Label Commenter
 
 on:
   pull_request:
-    types: [labeled, unlabeled, synchronize]
+    types: [synchronize, labeled]
 
 jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      - name: Check for specific label
+      - name: Checkout repository
         if: contains(github.event.pull_request.labels.*.name, 'conflict')
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const { data: pullRequest } = await github.rest.pulls.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-            });
+        uses: actions/checkout@v2
 
-            const existingComments = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              per_page: 100, // GitHub API 限制，可能需要分页
-            });
+      - name: Comment on PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          const github = require('@actions/github');
+          const context = github.context;
 
-            const commentBody = "@${{ github.event.pull_request.user.login }} This PR has conflicts, please resolve them.";
+          const existingComments = await github.rest.issues.listComments({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            per_page: 100, // GitHub API limit, may need pagination
+          });
 
-            let shouldComment = true;
-            existingComments.data.forEach(comment => {
-              if (comment.body.includes(commentBody)) {
-                shouldComment = false;
-              }
-            });
+          const commentBodyConflict = `@${{ github.event.pull_request.user.login }} This PR has conflicts, please resolve them.`;
+          const commentBodyLabel = `@${{ github.event.pull_request.user.login }} A new label has been added to this PR.`;
 
-            if (shouldComment) {
+          let shouldCommentConflict = true;
+          let shouldCommentLabel = true;
+
+          existingComments.data.forEach(comment => {
+            if (comment.body.includes(commentBodyConflict)) {
+              shouldCommentConflict = false;
+            }
+            if (comment.body.includes(commentBodyLabel)) {
+              shouldCommentLabel = false;
+            }
+          });
+
+          if (context.payload.action === 'labeled') {
+            if (shouldCommentLabel) {
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
-                body: commentBody,
+                body: commentBodyLabel,
               });
             }
+          }
+
+          if (context.payload.action === 'synchronize' && context.payload.pull_request.mergeable_state === 'dirty') {
+            if (shouldCommentConflict) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBodyConflict,
+              });
+            }
+          }
