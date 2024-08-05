@@ -35,12 +35,3 @@ jobs:
                 shouldComment = false;
               }
             });
-
-            # if (shouldComment) {
-              # await github.rest.issues.createComment({
-              #   owner: context.repo.owner,
-              #   repo: context.repo.repo,
-              #   issue_number: context.issue.number,
-              #   body: commentBody
-              # });
-            # }
