@@ -1,8 +1,9 @@
-const esbuild = require('esbuild');
-const fs = require('fs');
-const path = require('path');
+import esbuild from 'esbuild';
+import fs from 'fs';
+import path from 'path';
+
 const format = process.argv[2] || 'iife';
-module.exports = {
+export default {
     name: 'bindEnv',
     setup(build) {
         build.onLoad({ filter: /\.*/ }, async args => {

@@ -15,7 +15,7 @@
         "r-build-iife": "node rollup.build.js iife",
         "r-build-cjs": "node rollup.build.js cjs",
         "r-build-esm": "node rollup.build.js esm",
-        "build": "pnpm build-iife && pnpm build-cjs && pnpm build-esm",
+        "build": "pnpm build-esm",
         "build-iife": "node build.js iife",
         "build-cjs": "node build.js cjs",
         "build-esm": "node build.js esm"
