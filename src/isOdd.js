@@ -6,6 +6,7 @@ import { isNumber } from './type';
  */
 export function isOdd(val) {
     console.log('isOdd');
+    console.log('new new comment');
     if (!isNumber(val)) {
         console.log(`输入的参数 ${val} 不是number类型`);
         return false;
