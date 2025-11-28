@@ -21,4 +21,4 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - run: pnpx pkg-pr-new publish --packageManager=pnpm
+      - run: pnpx pkg-pr-new publish --packageManager=pnpm,npm,yarn,bun
