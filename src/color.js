@@ -1,7 +1,7 @@
 /**
  * @desc 生成随机颜色
  * @param {string} format 颜色格式，支持 'hex' 和 'rgb'，默认为 'hex'
- * @return {string} 返回一个16进制的颜色字符串
+ * @return {string} 返回一个16进制的颜色字符串或者RGB颜色字符串
  */
 export function randomColor(format = 'hex') {
     if (format === 'rgb') {
