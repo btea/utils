@@ -64,7 +64,7 @@ getTimeNum(new Date(2022, 1, 1), 'day'); // 2022年2月第32天
 getTimeNum(new Date(2022, 1, 1), 'week'); //  2022年2月第6周
 ```
 
-#### randomColor()
+#### randomColor(format?: string)
 
 _随机生成一个 6 位 16 进制的有效颜色_
 
