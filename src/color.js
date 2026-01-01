@@ -12,3 +12,10 @@ export function randomColor(format = 'hex') {
     }
     return '#' + Math.random().toString(16).slice(2, 8);
 }
+
+export function hslColor() {
+    const h = Math.floor(Math.random() * 360);
+    const s = Math.floor(Math.random() * 101);
+    const l = Math.floor(Math.random() * 101);
+    return `hsl(${h}, ${s}%, ${l}%)`;
+}

@@ -1,0 +1,13 @@
+diff --git a/dist/chunks/index.456_DGfR.js b/dist/chunks/index.456_DGfR.js
+index 0777423afcd449117aab77856bbcefe044f45391..75252620d4fb9ed736019edd43ee747b9d63a673 100644
+--- a/dist/chunks/index.456_DGfR.js
++++ b/dist/chunks/index.456_DGfR.js
+@@ -529,7 +529,7 @@ function formatProjectName(project, suffix = " ") {
+ 	if (!c.isColorSupported) return `|${project.name}|${suffix}`;
+ 	let background = project.color && c[`bg${capitalize(project.color)}`];
+ 	if (!background) background = labelDefaultColors[project.name.split("").reduce((acc, v, idx) => acc + v.charCodeAt(0) + idx, 0) % labelDefaultColors.length];
+-	return c.black(background(` ${project.name} `)) + suffix;
++	return c.white(background(` ${project.name} `)) + suffix;
+ }
+ function withLabel(color, label, message) {
+ 	const bgColor = `bg${color.charAt(0).toUpperCase()}${color.slice(1)}`;
